@@ -242,7 +242,7 @@ app.post('/api/enroll', async (req, res) => {
 
 // In your server code, add the following route to drop the course
 
-app.delete('/api/enrollments/drop/:id', async (req, res) => {
+app.delete('/api/enrollments/drop', async (req, res) => {
   const { id } = req.params;
 
   try {
@@ -340,7 +340,7 @@ app.patch('/api/enrollments/rejectByInstructor', async (req, res) => {
   }
 });
 
-app.get('/api/enrollments/studentfind/:email', async (req, res) => {
+app.get('/api/enrollments/studentfind', async (req, res) => {
   const  studentEmai  = req.params.email;
   console.log('Received email:', studentEmai);
 
