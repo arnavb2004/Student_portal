@@ -11,7 +11,7 @@ const EnrolledCourses = ({ studentEmail }) => {
       try {
         setLoading(true);
         const response = await axios.get(
-          'https://student-portal-coral.vercel.app/api/enrollments/studentfind', {
+          'https://student-portal-coral.vercel.app/api/enrollments/drop', {
           params: { studentEmail },
         }
         );
