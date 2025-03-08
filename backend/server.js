@@ -14,9 +14,41 @@ const app = express();
 connectDB();
 
 // Middleware
-app.use(cors());
-app.use(bodyParser.json());
+app.use(
+  cors({
+    origin: "https://guest-house-psi.vercel.app",
+    methods: "GET,POST,PUT,DELETE",
+    credentials: true, // Allow cookies and authentication headers
+  })
+);
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "https://guest-house-psi.vercel.app");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.header("Access-Control-Allow-Credentials", "true");
+  next();
+});
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// ✅ Disable console.log in production
+if (process.env.NODE_ENV === "production") {
+  console.log = () => {};
+}
+
+app.get("/", (req, res) => {
+  console.log("Home route accessed");
+  res.json({ message: "A simple API" });
+});
+app.get("/protected", checkAuth, (req, res) => {
+  console.log("Protected route accessed");
+  res.json({
+    message: "Protected route",
+    user: req.body.user,
+    accessToken: req.body.newaccessToken,
+  });
+});
 // Debugging Middleware
 /*app.use((req, res, next) => {
   console.log(`Incoming Request: ${req.method} ${req.url}`);
