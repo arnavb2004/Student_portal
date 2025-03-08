@@ -21,6 +21,7 @@ app.use(
     credentials: true, // Allow cookies and authentication headers
   })
 );
+
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "https://aims-portal-nine.vercel.app");
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE,PATCH");
