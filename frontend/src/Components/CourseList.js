@@ -10,7 +10,7 @@ const CourseList = ({ studentEmail }) => {
     // Fetch the list of courses from the backend
     const fetchCourses = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/courses');
+        const response = await axios.get('https://student-portal-coral.vercel.app/api/courses');
         setCourses(response.data); // Assuming API returns an array of courses
         setLoading(false);
       } catch (err) {
@@ -47,7 +47,7 @@ const CourseList = ({ studentEmail }) => {
   // Enrollment function
   const enrollInCourse = async (courseId) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/enroll', {
+      const response = await axios.post('https://student-portal-coral.vercel.app/api/enroll', {
         studentEmail,
         courseId,
         
