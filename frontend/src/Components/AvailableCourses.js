@@ -9,7 +9,7 @@ const AvailableCourses = ({ studentEmail }) => {
   useEffect(() => {
     const fetchAvailableCourses = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/available-courses', {
+        const response = await axios.get('https://student-portal-coral.vercel.app/api/available-courses', {
           params: { studentEmail },
         });
         console.log('Available Courses Response:', response.data);
@@ -27,7 +27,7 @@ const AvailableCourses = ({ studentEmail }) => {
 
   const handleEnrollmentRequest = async (courseId) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/enrollments/request', {
+      const response = await axios.post('https://student-portal-coral.vercel.app/api/enrollments/request', {
         studentEmail,
         courseId,
       });
