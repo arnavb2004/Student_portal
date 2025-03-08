@@ -17,7 +17,7 @@ connectDB();
 app.use(
   cors({
     origin: "https://aims-portal-nine.vercel.app",
-    methods: "GET,POST,PUT,DELETE",
+    methods: "GET,POST,PUT,DELETE,PATCH",
     credentials: true, // Allow cookies and authentication headers
   })
 );
