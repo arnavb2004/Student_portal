@@ -315,9 +315,9 @@ app.delete('/api/enrollments/drop', async (req, res) => {
 });
 
 
-app.patch('/api/enrollments/approveByInstructor', async (req, res) => {
+app.patch('/api/enrollments/approveByInstructor/:_id', async (req, res) => {
   
-  const { _id } = req.body;
+  const { _id } = req.params;
   try {
     //console.log('Approving enrollment with ID:', _id);
     const existingEnrollment = await Enrollments.findById(_id);
@@ -361,9 +361,9 @@ app.patch('/api/enrollments/approveByInstructor', async (req, res) => {
   }
 });
 
-app.patch('/api/enrollments/rejectByInstructor', async (req, res) => {
+app.patch('/api/enrollments/rejectByInstructor/:_id', async (req, res) => {
   
-  const { _id } = req.body;
+  const { _id } = req.params;
   try {
     console.log('Approving enrollment with ID:', _id);
     const updatedEnrollment = await Enrollments.findByIdAndUpdate(
