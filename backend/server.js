@@ -55,6 +55,50 @@ app.get("/", (req, res) => {
   next();
 });*/
 
+const users = [
+  {
+    email: 'aarushdua2004@gmail.com',
+    name: 'Aarush Dua',
+    role: ['CourseInstructor'],
+  },
+  {
+    email: 'bansalarnav1@gmail.com',
+    name: 'Arnav',
+    role: ['CourseInstructor'],
+  },
+  {
+    email: 'arnav.020704@gmail.com',
+    name: 'Arnav',
+    role: ['CourseInstructor','FacultyAdvisor'],
+  },
+  {
+    email: 'duaaarush07@gmail.com',
+    name: 'Aarush',
+    role: ['FacultyAdvisor'],
+  },
+];
+
+// Function to seed the database
+const seedDatabase = async () => {
+  try {
+    // Clear existing users
+    await User.deleteMany({});
+    console.log('Existing users deleted.');
+
+    // Insert new users
+    await User.insertMany(users);
+    console.log('New users added.');
+
+    // Close the connection
+    //mongoose.connection.close();
+  } catch (err) {
+    console.error('Error seeding database:', err);
+   // mongoose.connection.close();
+  }
+};
+
+// Execute the seeding function
+seedDatabase();
 // Routes
 app.use('/api', authRoutes);
 app.use('/api/courses', courseRoutes);
