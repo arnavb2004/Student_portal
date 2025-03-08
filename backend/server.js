@@ -41,14 +41,14 @@ app.get("/", (req, res) => {
   console.log("Home route accessed");
   res.json({ message: "A simple API" });
 });
-app.get("/protected", checkAuth, (req, res) => {
-  console.log("Protected route accessed");
-  res.json({
-    message: "Protected route",
-    user: req.body.user,
-    accessToken: req.body.newaccessToken,
-  });
-});
+// app.get("/protected", checkAuth, (req, res) => {
+//   console.log("Protected route accessed");
+//   res.json({
+//     message: "Protected route",
+//     user: req.body.user,
+//     accessToken: req.body.newaccessToken,
+//   });
+// });
 // Debugging Middleware
 /*app.use((req, res, next) => {
   console.log(`Incoming Request: ${req.method} ${req.url}`);
