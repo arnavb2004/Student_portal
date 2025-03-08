@@ -19,7 +19,7 @@ const Login = ({ onAuthenticate }) => {
   const isValidInstructorOrAdvisorEmail = async (email, role, name) => {
     try {
       
-      const response = await axios.post('http://localhost:5000/api/verify-instructor-advisor', { email, role, name });
+      const response = await axios.post('https://student-portal-coral.vercel.app/api/verify-instructor-advisor', { email, role, name });
       console.log(response.data.exists)
       return response.data.exists; // Backend should return { exists: true/false }
       
@@ -58,7 +58,7 @@ const Login = ({ onAuthenticate }) => {
 
     setIsLoading(true);
     try {
-      const response = await axios.post('http://localhost:5000/api/login', { email, role, name });
+      const response = await axios.post('https://student-portal-coral.vercel.app/api/login', { email, role, name });
       setMessage(response.data.message);
       setIsOtpSent(true);
     } catch (error) {
@@ -78,7 +78,7 @@ const Login = ({ onAuthenticate }) => {
 
     setIsLoading(true);
     try {
-      const response = await axios.post('http://localhost:5000/api/verify', { email, otp, role });
+      const response = await axios.post('https://student-portal-coral.vercel.app/api/verify', { email, otp, role });
       if (response.data.success) {
         localStorage.setItem('isAuthenticated', 'true'); // Store authentication status
         onAuthenticate(true, role);
