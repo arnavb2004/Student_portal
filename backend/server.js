@@ -16,7 +16,7 @@ connectDB();
 // Middleware
 app.use(
   cors({
-    origin: "https://guest-house-psi.vercel.app",
+    origin: "https://aims-portal-nine.vercel.app",
     methods: "GET,POST,PUT,DELETE",
     credentials: true, // Allow cookies and authentication headers
   })
