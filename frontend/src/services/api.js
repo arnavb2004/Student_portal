@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api'; // Backend URL
+const API_URL = 'https://student-portal-coral.vercel.app/api'; // Backend URL
 
 // Fetch all courses
 export const fetchCourses = async () => {
