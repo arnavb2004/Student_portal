@@ -8,7 +8,7 @@ const AddCourse = ({ instructor }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/courses/add', {
+      const response = await axios.post('https://student-portal-coral.vercel.app/api/courses/add', {
         courseId,
         instructor,
       });
