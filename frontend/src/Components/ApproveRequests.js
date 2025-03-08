@@ -30,9 +30,7 @@ const ApproveRequests = ({ instructor }) => {
   // Handle course approval
   const handleApprove = async (_id) => {
     try {
-      const response = await axios.patch('https://student-portal-coral.vercel.app/api/enrollments/approveByInstructor', {
-        _id,
-      });
+      const response = await axios.patch(`https://student-portal-coral.vercel.app/api/enrollments/approveByInstructor/${_id}`);
       setMessage(response.data.message);
       setRequests((prev) => prev.filter((req) => req._id !== _id));
     } catch (error) {
@@ -43,9 +41,7 @@ const ApproveRequests = ({ instructor }) => {
   // Handle course rejection
   const handleReject = async (_id) => {
     try {
-      const response = await axios.patch('https://student-portal-coral.vercel.app/api/enrollments/rejectByInstructor', {
-        _id,
-      });
+      const response = await axios.patch(`https://student-portal-coral.vercel.app/api/enrollments/rejectByInstructor/${_id}`);
       setMessage(response.data.message);
       setRequests((prev) => prev.filter((req) => req._id !== _id));
     } catch (error) {
