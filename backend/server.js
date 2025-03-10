@@ -387,7 +387,7 @@ app.patch('/api/enrollments/rejectByInstructor/:_id', async (req, res) => {
 });
 
 app.get('/api/enrollments/studentfind', async (req, res) => {
-  const  studentEmai  = req.params.email;
+  const  studentEmai  = req.params.studentEmail;
   console.log('Received email:', studentEmai);
 
   try {
