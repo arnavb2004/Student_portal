@@ -1,4 +1,4 @@
-#**Student Portal 🎓**
+**#Student Portal 🎓**
 
 A MERN stack application that allows students to send enrollment requests, which are approved first by the course instructor and then by a faculty advisor. The project includes OTP-based login via Gmail for authentication.
 
