@@ -77,7 +77,6 @@ const users = [
   },
 ];
 
-// Function to seed the database
 const seedDatabase = async () => {
   try {
     const User = require('./models/userModel')
