@@ -11,7 +11,7 @@ const Enrollments = require('./models/enrollmentModel'); // Ensure correct path
 const User=require('./models/userModel');
 
 const app = express();
-connectDB();
+
 
 // Middleware
 app.use(
@@ -29,7 +29,7 @@ app.use((req, res, next) => {
   res.header("Access-Control-Allow-Credentials", "true");
   next();
 });
-
+connectDB();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
