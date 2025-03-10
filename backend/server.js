@@ -12,8 +12,6 @@ const User=require('./models/userModel');
 
 const app = express();
 
-
-// Middleware
 app.use(
   cors({
     origin: "https://aims-portal-nine.vercel.app",
