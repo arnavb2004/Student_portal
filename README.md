@@ -12,9 +12,9 @@ A MERN stack application that allows students to send enrollment requests, which
 
 ✅ Strict Role-Based Access 
 
--Only designated users can log in as Instructors and Faculty Advisors.
+   -Only designated users can log in as Instructors and Faculty Advisors.
      
--Only students with a valid IIT Ropar email ID can register as students.
+   -Only students with a valid IIT Ropar email ID can register as students.
      
 ✅ Course Management – Instructors can add new courses.
 
