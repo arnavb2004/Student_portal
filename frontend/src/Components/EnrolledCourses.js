@@ -6,6 +6,7 @@ const EnrolledCourses = ({ studentEmail }) => {
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(true);
 
+  
   useEffect(() => {
     const fetchEnrolledCourses = async () => {
       try {
