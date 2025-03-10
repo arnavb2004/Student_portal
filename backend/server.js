@@ -286,7 +286,7 @@ app.post('/api/enroll', async (req, res) => {
 // In your server code, add the following route to drop the course
 
 app.delete('/api/enrollments/drop', async (req, res) => {
-  const { id } = req.query.enrollmentId;
+  const  id  = req.query.enrollmentId;
   console.log("e_id",id);
   try {
     // Find the enrollment by ID
