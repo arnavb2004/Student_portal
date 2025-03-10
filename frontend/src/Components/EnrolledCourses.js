@@ -29,7 +29,7 @@ const EnrolledCourses = ({ studentEmail }) => {
     try {
        await axios.delete(
           'https://student-portal-coral.vercel.app/api/enrollments/drop', {
-          params: { studentEmail },
+          params: { enrollmentId },
         }
       );
       setEnrolledCourses((prev) =>
