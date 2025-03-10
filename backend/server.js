@@ -81,7 +81,6 @@ const users = [
 const seedDatabase = async () => {
   try {
     const User = require('./models/userModel')
-    // Clear existing users
     await User.deleteMany({});
     console.log('Existing users deleted.');
 
