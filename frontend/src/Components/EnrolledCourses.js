@@ -21,6 +21,7 @@ const EnrolledCourses = ({ studentEmail }) => {
         setLoading(false);
       }
     };
+    
     fetchEnrolledCourses();
   }, [studentEmail]);
 
