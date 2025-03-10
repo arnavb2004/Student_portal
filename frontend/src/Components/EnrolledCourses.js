@@ -11,11 +11,9 @@ const EnrolledCourses = ({ studentEmail }) => {
     const fetchEnrolledCourses = async () => {
       try {
         setLoading(true);
-        const response =
-          await axios.get('https://student-portal-coral.vercel.app/api/enrollments/studentfind', {
+        const response =await axios.get('https://student-portal-coral.vercel.app/api/enrollments/studentfind', {
           params: { studentEmail },
         });
-        );
         setEnrolledCourses(response.data);
       } catch (error) {
         console.error('Error fetching enrolled courses:', error);
@@ -34,6 +32,7 @@ const EnrolledCourses = ({ studentEmail }) => {
           'https://student-portal-coral.vercel.app/api/enrollments/drop', {
           params: { studentEmail },
         }
+      );
       setEnrolledCourses((prev) =>
         prev.filter((course) => course._id !== enrollmentId)
       );
