@@ -33,7 +33,9 @@ Database: MongoDB
 
 ## **Authentication**: OTP-based login via Gmail
 
-## **Deployment** (on vercel): https://aims-portal-nine.vercel.app
+## **Deployment** (on vercel):
+
+This project has been deployed on vercel (https://aims-portal-nine.vercel.app)
 
 
 ## **📦 Installation**
