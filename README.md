@@ -31,7 +31,9 @@ Backend: Node.js, Express.js
 
 Database: MongoDB
 
-## **Authentication**: OTP-based login via Gmail
+## **Authentication**: 
+
+OTP-based login via Gmail
 
 ## **Deployment** (on vercel):
 
