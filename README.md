@@ -3,7 +3,7 @@
 
 A MERN stack application that allows students to send enrollment requests, which are approved first by the course instructor and then by a faculty advisor. The project includes OTP-based login via Gmail for authentication.
 
-## **🚀 #Features**
+## **🚀 Features**
 
 ✅ Student Enrollment System – Students can request to enroll in courses.
 
@@ -23,7 +23,7 @@ A MERN stack application that allows students to send enrollment requests, which
 
 ✅ Modern UI – Built with React.js, offering a clean and responsive interface.
 
-## **🛠️ # Tech Stack**
+## **🛠️ Tech Stack**
 
 Frontend: React.js
 
@@ -31,7 +31,7 @@ Backend: Node.js, Express.js
 
 Database: MongoDB
 
-##**Authentication**: OTP-based login via Gmail
+## **Authentication**: OTP-based login via Gmail
 
 ## **Deployment** (on vercel): https://aims-portal-nine.vercel.app
 
