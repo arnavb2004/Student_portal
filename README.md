@@ -64,7 +64,7 @@ npm install
 
 3️⃣ Set Up Environment Variables
 
-Create a .env file in both the backend  directories with the required credentials:
+Create a .env file in the backend directory with the required credentials:
 
 Backend (.env)
 
